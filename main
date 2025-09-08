@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    // Definição das variáveis para o número de casas a mover
+    const int casas_para_baixo = 2;
+    const int casas_para_esquerda = 1;
+
+    // Movimentos anteriores (exemplo)
+    // Aqui você pode colocar os movimentos anteriores das outras peças
+    // Exemplo:
+    printf("Cima\n");
+    printf("Direita\n");
+    printf("Direita\n");
+    printf("Baixo\n");
+
+    // Linha em branco para separar os movimentos do Cavalo
+    printf("\n");
+
+    /*
+     * Movimento do Cavalo:
+     * O Cavalo se move em "L": duas casas para baixo e uma para a esquerda.
+     * Usaremos loops aninhados para simular esse movimento.
+     * O loop externo (for) controla o movimento para baixo.
+     * O loop interno (while) controla o movimento para a esquerda.
+     */
+
+    int i = 0; // contador para o loop while interno
+
+    // Loop externo: mover para baixo duas vezes
+    for (int passo_baixo = 0; passo_baixo < casas_para_baixo; passo_baixo++) {
+        printf("Baixo\n");
+    }
+
+    // Loop interno: mover para esquerda uma vez
+    while (i < casas_para_esquerda) {
+        printf("Esquerda\n");
+        i++;
+    }
+
+    return 0;
+}
